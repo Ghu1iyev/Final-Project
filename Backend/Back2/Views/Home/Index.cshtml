@@ -1,0 +1,125 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<main>
+    <section id="ready">
+        <div class="container">
+            <div class="title">
+                <h2>READY TO LAUNCH</h2>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-bomb"></i>
+            </div>
+            <div class="title">
+                <h2>LOREM IPSUM DOLOR SIT AMET</h2>
+            </div>
+            <div class="desc">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                    mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                    quis enim.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="container mb-5">
+            <div class="title text-center mt-5">
+                <h2>OUR PORTFOLIO</h2>
+            </div>
+            <div class="row">
+                @foreach (Portfolio portfolio in Model.portfolios)
+                {
+                    <div class="img col-lg-4 col-md-6 col-sm-12">
+                        <img src="./assets/images/@portfolio.Image" alt="">
+                    </div>
+
+                }
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="title text-center pt-5">
+                <h2>ABOUT COMPANY</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="contact col-lg-4 col-md-12 col-sm-12">
+                    <img src="./assets/images/team1.png" alt="">
+                    <h2>Jhon Deo Alex</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                    </p>
+                    <div class="icons">
+                        <ul>
+                            <li><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-google"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="contact col-lg-4 col-md-12  col-sm-12">
+                    <img src="./assets/images/team2.jpg" alt="">
+                    <h2>Linda Sew Lie</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit.
+                    </p>
+                    <div class="icons">
+                        <ul>
+                            <li><a href=""><i class="fa-brands fa-facebook-square"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                            <li><a href=""><i class="fa-brands fa-google"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about col-lg-4 col-md-12  col-sm-12">
+                    <ul>
+                        <li>
+                            <a class="active" href="">Vivamus sagittis egestas mauris</a>
+                        </li>
+                        <li><a class="btn-active" href="">Cras viverra ac orci ac</a></li>
+                        <li><a class="active" href="">Sed Diam Nonummy Euismod</a></li>
+                        <li><a class="active" href="">Vivamus sagittis egestas mauris</a></li>
+                        <li><a class="active" href="">Cras viverra ac orci ac</a></li>
+                        <li><a class="active" href="">Sed Diam Nonummy Euismod</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container mb-5 col-lg-12 col-md-12 col-sm-12">
+            <div class="title pt-5">
+                <h2>CONTACT HERE</h2>
+            </div>
+            <div class="form pt-5">
+                <form action="">
+                    <div class="name pt-3">
+                        <input placeholder="Name" type="text">
+                    </div>
+                    <div class="email pt-3">
+                        <input type="email" placeholder="Email address">
+                    </div>
+                    <div class="notes pt-3">
+                        <input type="text" placeholder="Notes">
+                    </div>
+                </form>
+            </div>
+            <div class="btn pt-4 col-lg-12 col-md-12 col-12 text-center">
+                <a href="">SUBMIT REQUEST</a>
+            </div>
+        </div>
+    </section>
+    <address>
+        Address: 230/45 , Newyork City, USA-305670
+    </address>
+    <section id="maps">
+        <div id="map" style="width:100%;height:400px"></div>
+    </section>
+    
+</main>
